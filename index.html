@@ -3,7 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Work in Progress</title>
+    <title>Toddeh Alexander</title>
+
+    <!-- Meta tags for SEO -->
+    <meta
+      name="description"
+      content="The official portfolio of Toddeh Alexander is currently under construction. Stay tuned for an amazing update!"
+    />
+    <meta
+      name="keywords"
+      content="Toddeh Alexander, Portfolio, Web Developer, Under Construction, Work in Progress, Web Projects"
+    />
+    <meta name="author" content="Toddeh Alexander" />
+    <meta property="og:title" content="Toddeh Alexander - Website Under Construction" />
+    <meta property="og:description" content="Exciting updates are coming soon to the portfolio of Toddeh Alexander. Stay tuned!" />
+    <meta property="og:image" content="/assets/coming-soon-thumbnail.png" />
+    <meta property="og:site_name" content="Toddeh Alexander's Portfolio" />
+    <meta name="robots" content="index, follow" />
+    
+    <!-- Favicon Links -->
+    <link rel="icon" href="/assets/favicon/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/assets/favicon/favicon-16x16.png" type="image/png" sizes="16x16">
+    <link rel="icon" href="/assets/favicon/favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="/assets/favicon/android-chrome-192x192.png" type="image/png" sizes="196x196">
+    <link rel="icon" href="/assets/favicon/android-chrome-512x512.png" type="image/png" sizes="512x512">
+    <link rel="apple-touch-icon" href="/assets/favicon/apple-touch-icon.png">
     <style>
         * {
             margin: 0;
@@ -11,9 +35,13 @@
             box-sizing: border-box;
         }
 
-        body {
+        html, body {
+            height: 100%;
+            width: 100%;
             overflow: hidden;
-            height: 100vh;
+        }
+
+        body {
             background: radial-gradient(circle, #1c1c1e, #2c2c2e);
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             color: white;
@@ -21,23 +49,32 @@
             justify-content: center;
             align-items: center;
             text-align: center;
+            user-select: none; /* Prevent text selection */
         }
 
         canvas {
             position: absolute;
             top: 0;
             left: 0;
+            width: 100%;
+            height: 100%;
             display: block;
             z-index: -1;
         }
 
         .content {
             z-index: 1;
+            transition: opacity 0.5s ease; /* Add transition for fading effect */
+        }
+
+        .hidden {
+            opacity: 0;
         }
 
         h1 {
             font-size: 2.5rem;
             margin-bottom: 1rem;
+            color: #e0e0e0; /* Softer shade of white */
         }
 
         p {
@@ -61,26 +98,57 @@
         .linkedin-button:hover {
             transform: scale(1.1);
         }
+
+        .hide-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: 2px solid #e0e0e0;
+            color: #e0e0e0;
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s ease, color 0.3s ease;
+            font-family: inherit; /* Match the font with the current font */
+        }
+
+        .hide-button:hover {
+            background: #e0e0e0;
+            color: #1c1c1e;
+        }
     </style>
 </head>
 <body>
     <canvas id="spaceCanvas"></canvas>
 
-    <div class="content">
+    <div class="content" id="content">
         <h1>Website Under Construction</h1>
         <p>Working to create something amazing. Stay tuned!</p>
         <a href="https://www.linkedin.com/" target="_blank" class="linkedin-button" aria-label="LinkedIn"></a>
     </div>
 
+    <button class="hide-button" id="hideButton">Hide Text</button>
+
     <script>
         const canvas = document.getElementById('spaceCanvas');
         const ctx = canvas.getContext('2d');
+        const content = document.getElementById('content');
+        const hideButton = document.getElementById('hideButton');
 
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+
+        resizeCanvas();
 
         const dots = [];
         const maxDistance = 100;
+        const mouseRadius = 100;
+        let mouseX = canvas.width / 2;
+        let mouseY = canvas.height / 2;
 
         class Dot {
             constructor(x, y, vx, vy) {
@@ -89,6 +157,7 @@
                 this.vx = vx;
                 this.vy = vy;
                 this.radius = 2;
+                this.color = '#d1d1d6'; // Default color (gray)
             }
 
             update() {
@@ -97,12 +166,22 @@
 
                 if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
                 if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
+
+                const dx = this.x - mouseX;
+                const dy = this.y - mouseY;
+                const distance = Math.sqrt(dx * dx + dy * dy);
+
+                if (distance < mouseRadius) {
+                    this.color = `rgba(255, 0, 0, ${1 - distance / mouseRadius})`; // Red color with fade effect
+                } else {
+                    this.color = '#d1d1d6'; // Default color (gray)
+                }
             }
 
             draw() {
                 ctx.beginPath();
                 ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-                ctx.fillStyle = '#fff';
+                ctx.fillStyle = this.color;
                 ctx.fill();
                 ctx.closePath();
             }
@@ -153,10 +232,24 @@
         }
 
         window.addEventListener('resize', () => {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
+            resizeCanvas();
             dots.length = 0;
             init();
+        });
+
+        window.addEventListener('mousemove', (event) => {
+            mouseX = event.clientX;
+            mouseY = event.clientY;
+        });
+
+        hideButton.addEventListener('click', () => {
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                hideButton.textContent = 'Hide Text';
+            } else {
+                content.classList.add('hidden');
+                hideButton.textContent = 'Show Text';
+            }
         });
 
         init();
