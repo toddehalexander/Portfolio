@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Toddeh Alexander</title>
 
     <!-- Meta tags for SEO -->
@@ -15,244 +15,329 @@
       content="Toddeh Alexander, Portfolio, Web Developer, Under Construction, Work in Progress, Web Projects"
     />
     <meta name="author" content="Toddeh Alexander" />
-    <meta property="og:title" content="Toddeh Alexander - Website Under Construction" />
-    <meta property="og:description" content="Exciting updates are coming soon to the portfolio of Toddeh Alexander. Stay tuned!" />
+    <meta
+      property="og:title"
+      content="Toddeh Alexander - Website Under Construction"
+    />
+    <meta
+      property="og:description"
+      content="Exciting updates are coming soon to the portfolio of Toddeh Alexander. Stay tuned!"
+    />
     <meta property="og:image" content="/assets/coming-soon-thumbnail.png" />
     <meta property="og:site_name" content="Toddeh Alexander's Portfolio" />
     <meta name="robots" content="index, follow" />
-    
+
     <!-- Favicon Links -->
-    <link rel="icon" href="/assets/favicon/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="/assets/favicon/favicon-16x16.png" type="image/png" sizes="16x16">
-    <link rel="icon" href="/assets/favicon/favicon-32x32.png" type="image/png" sizes="32x32">
-    <link rel="icon" href="/assets/favicon/android-chrome-192x192.png" type="image/png" sizes="196x196">
-    <link rel="icon" href="/assets/favicon/android-chrome-512x512.png" type="image/png" sizes="512x512">
-    <link rel="apple-touch-icon" href="/assets/favicon/apple-touch-icon.png">
+    <link rel="icon" href="/assets/favicon/favicon.ico" type="image/x-icon" />
+    <link
+      rel="icon"
+      href="/assets/favicon/favicon-16x16.png"
+      type="image/png"
+      sizes="16x16"
+    />
+    <link
+      rel="icon"
+      href="/assets/favicon/favicon-32x32.png"
+      type="image/png"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      href="/assets/favicon/android-chrome-192x192.png"
+      type="image/png"
+      sizes="196x196"
+    />
+    <link
+      rel="icon"
+      href="/assets/favicon/android-chrome-512x512.png"
+      type="image/png"
+      sizes="512x512"
+    />
+    <link rel="apple-touch-icon" href="/assets/favicon/apple-touch-icon.png" />
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-        html, body {
-            height: 100%;
-            width: 100%;
-            overflow: hidden;
-        }
+      html,
+      body {
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+      }
 
-        body {
-            background: radial-gradient(circle, #1c1c1e, #2c2c2e);
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            user-select: none; /* Prevent text selection */
-        }
+      body {
+        background: radial-gradient(circle, #1c1c1e, #2c2c2e);
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial, sans-serif;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        user-select: none;
+        /* Prevent text selection */
+      }
 
-        canvas {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            display: block;
-            z-index: -1;
-        }
+      canvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+        z-index: -1;
+      }
 
-        .content {
-            z-index: 1;
-            transition: opacity 0.5s ease; /* Add transition for fading effect */
-        }
+      .content {
+        z-index: 1;
+        transition: opacity 0.5s ease;
+        /* Add transition for fading effect */
+      }
 
-        .hidden {
-            opacity: 0;
-        }
+      .hidden {
+        opacity: 0;
+      }
 
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: #e0e0e0; /* Softer shade of white */
-        }
+      h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        color: #e0e0e0;
+        /* Softer shade of white */
+      }
 
-        p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            color: #d1d1d6;
-        }
+      p {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+        color: #d1d1d6;
+      }
 
-        .linkedin-button {
-            display: inline-block;
-            width: 50px;
-            height: 50px;
-            background: url('https://cdn-icons-png.flaticon.com/512/174/174857.png') no-repeat center center;
-            background-size: contain;
-            border: none;
-            outline: none;
-            cursor: pointer;
-            transition: transform 0.3s ease;
-        }
+      .linkedin-button {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        background: url("https://cdn-icons-png.flaticon.com/512/174/174857.png")
+          no-repeat center center;
+        background-size: contain;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+      }
 
-        .linkedin-button:hover {
-            transform: scale(1.1);
-        }
+      .linkedin-button:hover {
+        transform: scale(1.1);
+      }
 
-        .hide-button {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background: none;
-            border: 2px solid #e0e0e0;
-            color: #e0e0e0;
-            padding: 10px 20px;
-            font-size: 1rem;
-            cursor: pointer;
-            border-radius: 5px;
-            transition: background 0.3s ease, color 0.3s ease;
-            font-family: inherit; /* Match the font with the current font */
-        }
+      .hide-button {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background: none;
+        border: 2px solid #e0e0e0;
+        color: #e0e0e0;
+        padding: 10px 20px;
+        font-size: 1rem;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background 0.3s ease, color 0.3s ease;
+        font-family: inherit;
+        /* Match the font with the current font */
+      }
 
-        .hide-button:hover {
-            background: #e0e0e0;
-            color: #1c1c1e;
-        }
+      .hide-button:hover {
+        background: #e0e0e0;
+        color: #1c1c1e;
+      }
     </style>
-</head>
-<body>
+  </head>
+
+  <body>
     <canvas id="spaceCanvas"></canvas>
 
     <div class="content" id="content">
-        <h1>Website Under Construction</h1>
-        <p>Working to create something amazing. Stay tuned!</p>
-        <a href="https://www.linkedin.com/in/toddeh/" target="_blank" class="linkedin-button" aria-label="LinkedIn"></a>
+      <h1>Website Under Construction</h1>
+      <p>Working to create something amazing. Stay tuned!</p>
+      <a
+        href="https://www.linkedin.com/in/toddeh/"
+        target="_blank"
+        class="linkedin-button"
+        aria-label="LinkedIn"
+      ></a>
     </div>
 
     <button class="hide-button" id="hideButton">Hide Text</button>
 
     <script>
-        const canvas = document.getElementById('spaceCanvas');
-        const ctx = canvas.getContext('2d');
-        const content = document.getElementById('content');
-        const hideButton = document.getElementById('hideButton');
+      const canvas = document.getElementById("spaceCanvas");
+      const ctx = canvas.getContext("2d");
+      const content = document.getElementById("content");
+      const hideButton = document.getElementById("hideButton");
 
-        function resizeCanvas() {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
+      let dots = [];
+      const maxDistance = 100;
+      const mouseRadius = 100;
+      let mouseX = canvas.width / 2;
+      let mouseY = canvas.height / 2;
+
+      class Dot {
+        constructor(x, y, vx, vy) {
+          this.x = x;
+          this.y = y;
+          this.vx = vx;
+          this.vy = vy;
+          this.radius = 2;
+          this.color = "#d1d1d6"; // Default color (gray)
         }
 
+        update() {
+          this.x += this.vx;
+          this.y += this.vy;
+
+          if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
+          if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
+
+          const dx = this.x - mouseX;
+          const dy = this.y - mouseY;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+
+          if (distance < mouseRadius) {
+            this.color = `rgba(255, 0, 0, ${1 - distance / mouseRadius})`; // Red color with fade effect
+          } else {
+            this.color = "#d1d1d6"; // Default color (gray)
+          }
+        }
+
+        draw() {
+          ctx.beginPath();
+          ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+          ctx.fillStyle = this.color;
+          ctx.fill();
+          ctx.closePath();
+        }
+      }
+
+      function connectDots() {
+        for (let i = 0; i < dots.length; i++) {
+          for (let j = i + 1; j < dots.length; j++) {
+            const dx = dots[i].x - dots[j].x;
+            const dy = dots[i].y - dots[j].y;
+            const distance = Math.sqrt(dx * dx + dy * dy);
+
+            if (distance < maxDistance) {
+              ctx.beginPath();
+              ctx.moveTo(dots[i].x, dots[i].y);
+              ctx.lineTo(dots[j].x, dots[j].y);
+              ctx.strokeStyle = `rgba(255, 255, 255, ${
+                1 - distance / maxDistance
+              })`;
+              ctx.lineWidth = 0.5;
+              ctx.stroke();
+              ctx.closePath();
+            }
+          }
+        }
+      }
+
+      function resizeCanvas() {
+        const pixelRatio = window.devicePixelRatio || 1;
+
+        // Save the old width and height
+        const oldWidth = canvas.width / pixelRatio;
+        const oldHeight = canvas.height / pixelRatio;
+
+        // Update the canvas width and height to match the window size and pixel ratio
+        canvas.width = window.innerWidth * pixelRatio;
+        canvas.height = window.innerHeight * pixelRatio;
+
+        // Scale the context to the pixel ratio to avoid blurry rendering
+        ctx.scale(pixelRatio, pixelRatio);
+
+        // Scale dots' positions and velocities to the new canvas size
+        const widthRatio = canvas.width / (oldWidth * pixelRatio);
+        const heightRatio = canvas.height / (oldHeight * pixelRatio);
+
+        dots.forEach((dot) => {
+          dot.x *= widthRatio;
+          dot.y *= heightRatio;
+          dot.vx *= widthRatio;
+          dot.vy *= heightRatio;
+        });
+      }
+
+      function animate() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        dots.forEach((dot) => {
+          dot.update();
+          dot.draw();
+        });
+
+        connectDots();
+        requestAnimationFrame(animate);
+      }
+
+      function init() {
+        dots = []; // Clear existing dots
+        const dotCount = 100; // Number of dots
+
+        for (let i = 0; i < dotCount; i++) {
+          const x =
+            (Math.random() * canvas.width) / (window.devicePixelRatio || 1);
+          const y =
+            (Math.random() * canvas.height) / (window.devicePixelRatio || 1);
+          const vx = (Math.random() - 0.5) * 2;
+          const vy = (Math.random() - 0.5) * 2;
+
+          dots.push(new Dot(x, y, vx, vy));
+        }
+
+        animate();
+      }
+
+      // Handle touch and mouse events
+      function handleInteraction(event) {
+        let x, y;
+
+        if (event.touches && event.touches.length > 0) {
+          x = event.touches[0].clientX;
+          y = event.touches[0].clientY;
+        } else {
+          x = event.clientX;
+          y = event.clientY;
+        }
+
+        mouseX = x;
+        mouseY = y;
+      }
+
+      // Initial canvas setup
+      function setupCanvas() {
         resizeCanvas();
-
-        const dots = [];
-        const maxDistance = 100;
-        const mouseRadius = 100;
-        let mouseX = canvas.width / 2;
-        let mouseY = canvas.height / 2;
-
-        class Dot {
-            constructor(x, y, vx, vy) {
-                this.x = x;
-                this.y = y;
-                this.vx = vx;
-                this.vy = vy;
-                this.radius = 2;
-                this.color = '#d1d1d6'; // Default color (gray)
-            }
-
-            update() {
-                this.x += this.vx;
-                this.y += this.vy;
-
-                if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
-                if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
-
-                const dx = this.x - mouseX;
-                const dy = this.y - mouseY;
-                const distance = Math.sqrt(dx * dx + dy * dy);
-
-                if (distance < mouseRadius) {
-                    this.color = `rgba(255, 0, 0, ${1 - distance / mouseRadius})`; // Red color with fade effect
-                } else {
-                    this.color = '#d1d1d6'; // Default color (gray)
-                }
-            }
-
-            draw() {
-                ctx.beginPath();
-                ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-                ctx.fillStyle = this.color;
-                ctx.fill();
-                ctx.closePath();
-            }
-        }
-
-        function connectDots() {
-            for (let i = 0; i < dots.length; i++) {
-                for (let j = i + 1; j < dots.length; j++) {
-                    const dx = dots[i].x - dots[j].x;
-                    const dy = dots[i].y - dots[j].y;
-                    const distance = Math.sqrt(dx * dx + dy * dy);
-
-                    if (distance < maxDistance) {
-                        ctx.beginPath();
-                        ctx.moveTo(dots[i].x, dots[i].y);
-                        ctx.lineTo(dots[j].x, dots[j].y);
-                        ctx.strokeStyle = `rgba(255, 255, 255, ${1 - distance / maxDistance})`;
-                        ctx.lineWidth = 0.5;
-                        ctx.stroke();
-                        ctx.closePath();
-                    }
-                }
-            }
-        }
-
-        function animate() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-            dots.forEach(dot => {
-                dot.update();
-                dot.draw();
-            });
-
-            connectDots();
-            requestAnimationFrame(animate);
-        }
-
-        function init() {
-            for (let i = 0; i < 100; i++) {
-                const x = Math.random() * canvas.width;
-                const y = Math.random() * canvas.height;
-                const vx = (Math.random() - 0.5) * 2;
-                const vy = (Math.random() - 0.5) * 2;
-                dots.push(new Dot(x, y, vx, vy));
-            }
-
-            animate();
-        }
-
-        window.addEventListener('resize', () => {
-            resizeCanvas();
-            dots.length = 0;
-            init();
-        });
-
-        window.addEventListener('mousemove', (event) => {
-            mouseX = event.clientX;
-            mouseY = event.clientY;
-        });
-
-        hideButton.addEventListener('click', () => {
-            if (content.classList.contains('hidden')) {
-                content.classList.remove('hidden');
-                hideButton.textContent = 'Hide Text';
-            } else {
-                content.classList.add('hidden');
-                hideButton.textContent = 'Show Text';
-            }
-        });
-
         init();
+      }
+
+      // Event listeners
+      window.addEventListener("resize", () => {
+        resizeCanvas(); // Adjust canvas size and dot properties
+      });
+      window.addEventListener("mousemove", handleInteraction);
+      window.addEventListener("touchstart", handleInteraction);
+      window.addEventListener("touchmove", handleInteraction);
+      hideButton.addEventListener("click", () => {
+        if (content.classList.contains("hidden")) {
+          content.classList.remove("hidden");
+          hideButton.textContent = "Hide Text";
+        } else {
+          content.classList.add("hidden");
+          hideButton.textContent = "Show Text";
+        }
+      });
+
+      // Initialize the canvas
+      setupCanvas();
     </script>
-</body>
+  </body>
 </html>
