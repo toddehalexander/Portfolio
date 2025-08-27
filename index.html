@@ -1,343 +1,704 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Toddeh Alexander</title>
-
-    <!-- Meta tags for SEO -->
-    <meta
-      name="description"
-      content="The official portfolio of Toddeh Alexander is currently under construction. Stay tuned for an amazing update!"
-    />
-    <meta
-      name="keywords"
-      content="Toddeh Alexander, Portfolio, Web Developer, Under Construction, Work in Progress, Web Projects"
-    />
-    <meta name="author" content="Toddeh Alexander" />
-    <meta
-      property="og:title"
-      content="Toddeh Alexander - Website Under Construction"
-    />
-    <meta
-      property="og:description"
-      content="Exciting updates are coming soon to the portfolio of Toddeh Alexander. Stay tuned!"
-    />
-    <meta property="og:image" content="/assets/coming-soon-thumbnail.png" />
-    <meta property="og:site_name" content="Toddeh Alexander's Portfolio" />
-    <meta name="robots" content="index, follow" />
-
-    <!-- Favicon Links -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The official portfolio of Toddeh Alexander showcasing professional experience, projects, technical skills, and contact information.">
+    <meta name="keywords" content="Toddeh Alexander, Portfolio, Network Engineer, Software Developer, Cybersecurity, Projects, Skills">
+    <meta name="author" content="Toddeh Alexander">
+    <meta property="og:title" content="Toddeh Alexander | Portfolio">
+    <meta property="og:description" content="Explore Toddeh Alexander's portfolio including experience, projects, technical skills, and contact information.">
+    <meta property="og:image" content="/assets/portfolio-thumbnail.png">
+    <meta property="og:site_name" content="Toddeh Alexander's Portfolio">
+    <meta name="robots" content="index, follow">
+    <title>Toddeh Alexander | Portfolio</title>
+    <!-- Favicon -->
     <link rel="icon" href="/assets/favicon/favicon.ico" type="image/x-icon" />
-    <link
-      rel="icon"
-      href="/assets/favicon/favicon-16x16.png"
-      type="image/png"
-      sizes="16x16"
-    />
-    <link
-      rel="icon"
-      href="/assets/favicon/favicon-32x32.png"
-      type="image/png"
-      sizes="32x32"
-    />
-    <link
-      rel="icon"
-      href="/assets/favicon/android-chrome-192x192.png"
-      type="image/png"
-      sizes="196x196"
-    />
-    <link
-      rel="icon"
-      href="/assets/favicon/android-chrome-512x512.png"
-      type="image/png"
-      sizes="512x512"
-    />
+    <link rel="icon" href="/assets/favicon/favicon-16x16.png" type="image/png" sizes="16x16" />
+    <link rel="icon" href="/assets/favicon/favicon-32x32.png" type="image/png" sizes="32x32" />
+    <link rel="icon" href="/assets/favicon/android-chrome-192x192.png" type="image/png" sizes="196x196" />
+    <link rel="icon" href="/assets/favicon/android-chrome-512x512.png" type="image/png" sizes="512x512" />
     <link rel="apple-touch-icon" href="/assets/favicon/apple-touch-icon.png" />
+    <!-- END Favicon -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      html,
-      body {
-        height: 100%;
-        width: 100%;
-        overflow: hidden;
-      }
-
-      body {
-        background: radial-gradient(circle, #1c1c1e, #2c2c2e);
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-          "Helvetica Neue", Arial, sans-serif;
-        color: white;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        user-select: none;
-        /* Prevent text selection */
-      }
-
-      canvas {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        display: block;
-        z-index: -1;
-      }
-
-      .content {
-        z-index: 1;
-        transition: opacity 0.5s ease;
-        /* Add transition for fading effect */
-      }
-
-      .hidden {
-        opacity: 0;
-      }
-
-      h1 {
-        font-size: 2.5rem;
-        margin-bottom: 1rem;
-        color: #e0e0e0;
-        /* Softer shade of white */
-      }
-
-      p {
-        font-size: 1.2rem;
-        margin-bottom: 2rem;
-        color: #d1d1d6;
-      }
-
-      .linkedin-button {
-        display: inline-block;
-        width: 50px;
-        height: 50px;
-        background: url("https://cdn-icons-png.flaticon.com/512/174/174857.png")
-          no-repeat center center;
-        background-size: contain;
-        border: none;
-        outline: none;
-        cursor: pointer;
-        transition: transform 0.3s ease;
-      }
-
-      .linkedin-button:hover {
-        transform: scale(1.1);
-      }
-
-      .hide-button {
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        background: none;
-        border: 2px solid #e0e0e0;
-        color: #e0e0e0;
-        padding: 10px 20px;
-        font-size: 1rem;
-        cursor: pointer;
-        border-radius: 5px;
-        transition: background 0.3s ease, color 0.3s ease;
-        font-family: inherit;
-        /* Match the font with the current font */
-      }
-
-      .hide-button:hover {
-        background: #e0e0e0;
-        color: #1c1c1e;
-      }
+        :root {
+            --primary-bg: #0f0f10;
+            --secondary-bg: #1a1a1d;
+            --accent: #ff6b35;
+            --text-primary: #ffffff;
+            --text-secondary: #d1d5db;
+            --border: #2d2d32;
+        }
+        
+        body {
+            background-color: var(--primary-bg);
+            color: var(--text-primary);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .glass-card {
+            background: rgba(26, 26, 29, 0.7);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid var(--border);
+        }
+        
+        .section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        
+        .section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--accent);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .nav-link.active::after {
+            width: 100%;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -24px;
+            top: 0;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: var(--accent);
+            border: 2px solid var(--secondary-bg);
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: -18px;
+            top: 0;
+            height: 100%;
+            width: 2px;
+            background-color: var(--border);
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .skill-tag:hover {
+            transform: scale(1.05);
+        }
+        
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .highlight {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .highlight::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 30%;
+            background-color: var(--accent);
+            opacity: 0.3;
+            z-index: -1;
+            transition: height 0.3s ease;
+        }
+        
+        .highlight:hover::after {
+            height: 100%;
+        }
     </style>
-  </head>
+</head>
+<body class="min-h-screen">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-[#0f0f10]/90 backdrop-blur-md border-b border-[#2d2d32]">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="#" class="text-2xl font-bold text-white hover:text-[#ff6b35] transition-colors">
+                    <span class="highlight">Toddeh</span> Alexander
+                </a>
+                
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link text-white hover:text-[#ff6b35] transition-colors">Home</a>
+                    <a href="#experience" class="nav-link text-white hover:text-[#ff6b35] transition-colors">Experience</a>
+                    <a href="#projects" class="nav-link text-white hover:text-[#ff6b35] transition-colors">Projects</a>
+                    <a href="#skills" class="nav-link text-white hover:text-[#ff6b35] transition-colors">Skills</a>
+                    <a href="#contact" class="nav-link text-white hover:text-[#ff6b35] transition-colors">Contact</a>
+                </nav>
+                
+                <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 right-0 bg-[#1a1a1d] border-t border-[#2d2d32]">
+            <div class="container mx-auto px-6 py-4">
+                <div class="flex flex-col space-y-4">
+                    <a href="#home" class="text-white hover:text-[#ff6b35] transition-colors">Home</a>
+                    <a href="#experience" class="text-white hover:text-[#ff6b35] transition-colors">Experience</a>
+                    <a href="#projects" class="text-white hover:text-[#ff6b35] transition-colors">Projects</a>
+                    <a href="#skills" class="text-white hover:text-[#ff6b35] transition-colors">Skills</a>
+                    <a href="#contact" class="text-white hover:text-[#ff6b35] transition-colors">Contact</a>
+                </div>
+            </div>
+        </div>
+    </header>
 
-  <body>
-    <canvas id="spaceCanvas"></canvas>
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center pt-20">
+        <div class="container mx-auto px-6 py-20">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-12 md:mb-0">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-4">
+                        Hi, I'm <span class="text-[#ff6b35]">Toddeh</span> Alexander
+                    </h1>
+                    <h2 class="text-2xl md:text-3xl font-medium mb-6 text-[#d1d5db]">
+                        Welcome to my portfolio! 👋
+                    </h2>
+                    <p class="text-lg text-[#d1d5db] mb-8 max-w-lg">
+                        I'm passionate about building secure, reliable technology solutions that make a real difference.
+                    </p>
+                      <div class="flex space-x-4">
+                          <a href="#contact" class="px-6 py-3 bg-[#ff6b35] text-white rounded-md hover:bg-[#e05d2e] transition-colors">
+                              Contact Me
+                          </a>
+                          <!-- <a href="#projects" class="px-6 py-3 border border-[#2d2d32] text-white rounded-md hover:bg-[#1a1a1d] transition-colors">
+                              View Projects
+                          </a> -->
+                          <!-- Resume Button -->
+                          <a href="/resume/Toddeh_Alexander_Resume_8.27.25.pdf"
+                              target="_blank"
+                              class="px-6 py-3 border border-[#2d2d32] text-white rounded-md hover:bg-[#1a1a1d] transition-colors flex items-center">
+                              <i class="fas fa-file-alt mr-2"></i>
+                              View Resume
+                          </a>
+                      </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="relative w-64 h-64 md:w-80 md:h-80">
+                        <div class="absolute inset-0 bg-[#ff6b35] rounded-full opacity-20 blur-xl"></div>
+                        <div class="relative w-full h-full flex items-center justify-center floating">
+                            <div class="w-48 h-48 md:w-64 md:h-64 bg-gradient-to-br from-[#1a1a1d] to-[#0f0f10] rounded-full border border-[#2d2d32] flex items-center justify-center">
+                                <i class="fas fa-network-wired text-6xl md:text-8xl text-[#ff6b35]"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <div class="content" id="content">
-      <h1>Website Under Construction</h1>
-      <p>Working to create something amazing. Stay tuned!</p>
-      <a
-        href="https://www.linkedin.com/in/toddeh/"
-        target="_blank"
-        class="linkedin-button"
-        aria-label="LinkedIn"
-      ></a>
-    </div>
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-[#1a1a1d] section">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-2 text-center">
+                <span class="highlight">Professional</span> Experience
+            </h2>
+            <p class="text-[#d1d5db] text-center mb-12 max-w-2xl mx-auto">
+                My journey through the world of network engineering and cybersecurity
+            </p>
+            
+            <div class="relative max-w-4xl mx-auto">
+                <div class="timeline pl-8">
+                    <!-- Honda Racing Corporation -->
+                    <div class="timeline-item relative mb-12 glass-card p-6 rounded-lg border border-[#2d2d32]">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
+                            <h3 class="text-xl font-bold text-[#ff6b35]">Network Engineer</h3>
+                            <span class="text-sm text-[#d1d5db]">October 2024 - Present</span>
+                        </div>
+                        <h4 class="text-lg font-medium mb-2">Honda Racing Corporation (HRC) • Santa Clarita, California</h4>
+                        <ul class="list-disc pl-5 space-y-2 text-[#d1d5db]">
+                            <li>Provide real-time network infrastructure and communications support during live IndyCar and IMSA racing events, maintaining 99.9% uptime and secure high-speed connectivity for 35+ trackside engineers</li>
+                            <li>Design, configure, and deploy enterprise LAN infrastructure with Aruba 6405 switches in dual-core architecture and 3 edge switches</li>
+                            <li>Deploy and configure 12+ Cisco Firepower 2100 firewalls, successfully migrating 300+ NAT rules and ACLs from legacy ASA units</li>
+                            <li>Administer 150+ Azure Windows Server VMs and core infrastructure services ensuring 99.9% uptime for engineering workloads</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Kayne Anderson Rudnick -->
+                    <div class="timeline-item relative mb-12 glass-card p-6 rounded-lg border border-[#2d2d32]">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
+                            <h3 class="text-xl font-bold text-[#ff6b35]">Information Technology Technician - Intern</h3>
+                            <span class="text-sm text-[#d1d5db]">January 2022 - August 2022</span>
+                        </div>
+                        <h4 class="text-lg font-medium mb-2">Kayne Anderson Rudnick • Los Angeles, CA</h4>
+                        <ul class="list-disc pl-5 space-y-2 text-[#d1d5db]">
+                            <li>Designed, assembled, and constructed a 500-square-foot server room, racked 10 Cisco switches and routers, assisted in managing storage, network configuration, and power management</li>
+                            <li>Streamlined inventory management by cataloging and audits, saving 20+ hours per week, improving product forecasting</li>
+                            <li>Delivered technical support to 50+ employees, addressing OS (Windows, macOS, Linux), hardware and software issues</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Glendale Community College -->
+                    <div class="timeline-item relative glass-card p-6 rounded-lg border border-[#2d2d32]">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
+                            <h3 class="text-xl font-bold text-[#ff6b35]">Student Ambassador</h3>
+                            <span class="text-sm text-[#d1d5db]">March 2021 - June 2022</span>
+                        </div>
+                        <h4 class="text-lg font-medium mb-2">Glendale Community College • Glendale, CA</h4>
+                        <ul class="list-disc pl-5 space-y-2 text-[#d1d5db]">
+                            <li>Delivered comprehensive and effective assistance to 100+ students daily by guiding them through their onboarding phase in both online and in-person environments</li>
+                            <li>Reached over 25,000 students by creating YouTube videos to help students navigate online & remote environment</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <button class="hide-button" id="hideButton">Hide Text</button>
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 section">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-2 text-center">
+                <span class="highlight">Software</span> Projects
+            </h2>
+            <p class="text-[#d1d5db] text-center mb-12 max-w-2xl mx-auto">
+                My personal and professional development projects showcasing my technical skills
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Pokemon Master -->
+                <div class="project-card glass-card p-6 rounded-lg border border-[#2d2d32] transition-all duration-300">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-[#ff6b35]">Pokemon Master</h3>
+                        <span class="text-sm text-[#d1d5db]">May 2024</span>
+                    </div>
+                    <p class="text-[#d1d5db] mb-4">
+                        Engineered a full-stack web application with React frontend and Flask backend, enabling real-time Pokemon battles against AI opponents powered by minimax algorithms with alpha-beta pruning.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="skill-tag px-3 py-1 bg-[#1a1a1d] text-sm rounded-full border border-[#2d2d32] transition-transform">React</span>
+                        <span class="skill-tag px-3 py-1 bg-[#1a1a1d] text-sm rounded-full border border-[#2d2d32] transition-transform">Python</span>
+                        <span class="skill-tag px-3 py-1 bg-[#1a1a1d] text-sm rounded-full border border-[#2d2d32] transition-transform">Flask</span>
+                        <span class="skill-tag px-3 py-1 bg-[#1a1a1d] text-sm rounded-full border border-[#2d2d32] transition-transform">OpenAI</span>
+                    </div>
+                    <a href="https://github.com/toddehalexander/PokemonMaster" class="text-[#ff6b35] hover:underline flex items-center">
+                        <i class="fab fa-github mr-2"></i> View on GitHub
+                    </a>
+                </div>
+                
+                <!-- Imgur Clone -->
+                <div class="project-card glass-card p-6 rounded-lg border border-[#2d2d32] transition-all duration-300">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-[#ff6b35]">Imgur Clone</h3>
+                        <span class="text-sm text-[#d1d5db]">May 2024</span>
+                    </div>
+                    <p class="text-[#d1d5db] mb-4">
+                        Developed a secure web application using PHP and MySQL allowing users to upload images with client and server-side validation, implementing Docker containerization for version control.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="skill-tag px-3 py-1 bg-[#1a1a1d] text-sm rounded-full border border-[#2d2d32] transition-transform">PHP</span>
+                        <span class="skill-tag px-3 py-1 bg-[#1a1a1d] text-sm rounded-full border border-[#2d2d32] transition-transform">MySQL</span>
+                        <span class="skill-tag px-3 py-1 bg-[#1a1a1d] text-sm rounded-full border border-[#2d2d32] transition-transform">JavaScript</span>
+                        <span class="skill-tag px-3 py-1 bg-[#1a1a1d] text-sm rounded-full border border-[#2d2d32] transition-transform">Docker</span>
+                    </div>
+                    <a href="https://github.com/toddehalexander/Imgur-Clone" class="text-[#ff6b35] hover:underline flex items-center">
+                        <i class="fab fa-github mr-2"></i> View on GitHub
+                    </a>
+                </div>
+                
+                <!-- GitHub Push Checker -->
+                <div class="project-card glass-card p-6 rounded-lg border border-[#2d2d32] transition-all duration-300">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-[#ff6b35]">GitHub Push Checker</h3>
+                        <span class="text-sm text-[#d1d5db]">March 2024</span>
+                    </div>
+                    <p class="text-[#d1d5db] mb-4">
+                        Constructed Chrome extension using JavaScript to track GitHub push events, achieving over 500 impressions and a 5-star rating on the Chrome Web Store with 98% user retention rate.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="skill-tag px-3 py-1 bg-[#1a1a1d] text-sm rounded-full border border-[#2d2d32] transition-transform">JavaScript</span>
+                        <span class="skill-tag px-3 py-1 bg-[#1a1a1d] text-sm rounded-full border border-[#2d2d32] transition-transform">Chrome API</span>
+                        <span class="skill-tag px-3 py-1 bg-[#1a1a1d] text-sm rounded-full border border-[#2d2d32] transition-transform">GitHub API</span>
+                    </div>
+                    <a href="https://github.com/toddehalexander/PushChecker" class="text-[#ff6b35] hover:underline flex items-center">
+                        <i class="fab fa-github mr-2"></i> View on GitHub
+                    </a>
+                </div>
+                
+                <!-- AI Educational Chatbot -->
+                <div class="project-card glass-card p-6 rounded-lg border border-[#2d2d32] transition-all duration-300">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-[#ff6b35]">AI Educational Chatbot</h3>
+                        <span class="text-sm text-[#d1d5db]">February 2024</span>
+                    </div>
+                    <p class="text-[#d1d5db] mb-4">
+                        Led a 4-person development team in a 24-hour hackathon, winning the "Most Daily Use/Practical" award for a chatbot capable of accurately answering questions using textbook content.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="skill-tag px-3 py-1 bg-[#1a1a1d] text-sm rounded-full border border-[#2d2d32] transition-transform">React</span>
+                        <span class="skill-tag px-3 py-1 bg-[#1a1a1d] text-sm rounded-full border border-[#2d2d32] transition-transform">Flask</span>
+                        <span class="skill-tag px-3 py-1 bg-[#1a1a1d] text-sm rounded-full border border-[#2d2d32] transition-transform">Docker</span>
+                        <span class="skill-tag px-3 py-1 bg-[#1a1a1d] text-sm rounded-full border border-[#2d2d32] transition-transform">OpenAI</span>
+                        <span class="skill-tag px-3 py-1 bg-[#1a1a1d] text-sm rounded-full border border-[#2d2d32] transition-transform">Llama Index</span>
+                    </div>
+                    <a href="https://github.com/toddehalexander/Educational-Textbook-Chatbot" class="text-[#ff6b35] hover:underline flex items-center">
+                        <i class="fab fa-github mr-2"></i> View on GitHub
+                    </a>
+                </div>
+                
+                <!-- Code Racer -->
+                <div class="project-card glass-card p-6 rounded-lg border border-[#2d2d32] transition-all duration-300">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-[#ff6b35]">Code Racer</h3>
+                        <span class="text-sm text-[#d1d5db]">June 2023</span>
+                    </div>
+                    <p class="text-[#d1d5db] mb-4">
+                        Developed a web application focused on enhancing users' typing speed and accuracy while teaching 10+ sorting algorithms, implementing AES 256-bit encryption and accommodating 1,000 concurrent users.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="skill-tag px-3 py-1 bg-[#1a1a1d] text-sm rounded-full border border-[#2d2d32] transition-transform">JavaScript</span>
+                        <span class="skill-tag px-3 py-1 bg-[#1a1a1d] text-sm rounded-full border border-[#2d2d32] transition-transform">Firebase</span>
+                        <span class="skill-tag px-3 py-1 bg-[#1a1a1d] text-sm rounded-full border border-[#2d2d32] transition-transform">HTML/CSS</span>
+                    </div>
+                    <a href="https://github.com/toddehalexander/CodeRacer" class="text-[#ff6b35] hover:underline flex items-center">
+                        <i class="fab fa-github mr-2"></i> View on GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-[#1a1a1d] section">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-2 text-center">
+                <span class="highlight">Technical</span> Skills
+            </h2>
+            <p class="text-[#d1d5db] text-center mb-12 max-w-2xl mx-auto">
+                My expertise across various domains of network engineering and software development
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Network & Infrastructure -->
+                <div class="glass-card p-6 rounded-lg border border-[#2d2d32]">
+                    <h3 class="text-xl font-bold text-[#ff6b35] mb-4 flex items-center">
+                        <i class="fas fa-network-wired mr-3"></i> Network & Infrastructure
+                    </h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-[#ff6b35] mr-2"></i>
+                            <span>Cisco FTD/ASA</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-[#ff6b35] mr-2"></i>
+                            <span>Aruba AOS-CX</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-[#ff6b35] mr-2"></i>
+                            <span>IPsec VPN</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-[#ff6b35] mr-2"></i>
+                            <span>Windows Server</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-[#ff6b35] mr-2"></i>
+                            <span>Active Directory</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Security & Monitoring -->
+                <div class="glass-card p-6 rounded-lg border border-[#2d2d32]">
+                    <h3 class="text-xl font-bold text-[#ff6b35] mb-4 flex items-center">
+                        <i class="fas fa-shield-alt mr-3"></i> Security & Monitoring
+                    </h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-[#ff6b35] mr-2"></i>
+                            <span>Qualys VMDR</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-[#ff6b35] mr-2"></i>
+                            <span>CrowdStrike</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-[#ff6b35] mr-2"></i>
+                            <span>SolarWinds SNMPv3</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-[#ff6b35] mr-2"></i>
+                            <span>Vulnerability Management</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-[#ff6b35] mr-2"></i>
+                            <span>Nmap</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Development & Scripting -->
+                <div class="glass-card p-6 rounded-lg border border-[#2d2d32]">
+                    <h3 class="text-xl font-bold text-[#ff6b35] mb-4 flex items-center">
+                        <i class="fas fa-code mr-3"></i> Development & Scripting
+                    </h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-[#ff6b35] mr-2"></i>
+                            <span>Python, C++, JavaScript</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-[#ff6b35] mr-2"></i>
+                            <span>React, Node.js, Flask</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-[#ff6b35] mr-2"></i>
+                            <span>PowerShell, Bash</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-[#ff6b35] mr-2"></i>
+                            <span>Docker, Git, CI/CD</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-[#ff6b35] mr-2"></i>
+                            <span>MySQL, Firebase, PHP</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Certifications -->
+            <div class="mt-12 glass-card p-6 rounded-lg border border-[#2d2d32] max-w-4xl mx-auto">
+                <h3 class="text-xl font-bold text-[#ff6b35] mb-4 flex items-center">
+                    <i class="fas fa-certificate mr-3"></i> Certifications
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="flex items-start">
+                        <div class="bg-[#ff6b35] text-white p-2 rounded-md mr-4">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-medium">Azure Administrator Associate (AZ-104)</h4>
+                            <p class="text-sm text-[#d1d5db]">Completed July 2025</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="bg-[#ff6b35] text-white p-2 rounded-md mr-4">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-medium">Aruba OS-CX Switching Fundamentals</h4>
+                            <p class="text-sm text-[#d1d5db]">Completed Aug 2025</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="bg-[#ff6b35] text-white p-2 rounded-md mr-4">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-medium">Azure Developer Associate (AZ-204)</h4>
+                            <p class="text-sm text-[#d1d5db]">In Progress – Expected September 2025</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="py-12 section">
+        <div class="container mx-auto px-6">
+            <div class="glass-card p-8 rounded-lg border border-[#2d2d32] max-w-4xl mx-auto">
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/3 flex justify-center mb-6 md:mb-0">
+                        <div class="w-24 h-24 rounded-full bg-[#1a1a1d] border border-[#2d2d32] flex items-center justify-center">
+                            <i class="fas fa-graduation-cap text-3xl text-[#ff6b35]"></i>
+                        </div>
+                    </div>
+                    <div class="md:w-2/3 text-center md:text-left">
+                        <h3 class="text-2xl font-bold mb-2">California State University-Fullerton</h3>
+                        <p class="text-lg text-[#d1d5db] mb-2">Bachelor of Science in Computer Science | Minor in Cybersecurity</p>
+                        <p class="text-[#d1d5db]">December 2024 • Fullerton, CA</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-[#1a1a1d] section">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-2 text-center">
+                <span class="highlight">Get In</span> Touch
+            </h2>
+            <p class="text-[#d1d5db] text-center mb-12 max-w-2xl mx-auto">
+                Feel free to reach out for collaborations or just a friendly hello
+            </p>
+            
+            <div class="max-w-md mx-auto">
+                <div class="glass-card p-8 rounded-lg border border-[#2d2d32]">
+                    <h3 class="text-xl font-bold text-[#ff6b35] mb-6 text-center">Contact Information</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <div class="bg-[#ff6b35] text-white p-2 rounded-md mr-4">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">Email</h4>
+                                <a href="mailto:AlexanderToddeh@gmail.com" class="text-[#d1d5db] hover:text-[#ff6b35] transition-colors">AlexanderToddeh@gmail.com</a>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="bg-[#ff6b35] text-white p-2 rounded-md mr-4">
+                                <i class="fab fa-github"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">GitHub</h4>
+                                <a href="https://github.com/toddehalexander" target="_blank" class="text-[#d1d5db] hover:text-[#ff6b35] transition-colors">github.com/toddehalexander</a>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="bg-[#ff6b35] text-white p-2 rounded-md mr-4">
+                                <i class="fab fa-linkedin"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">LinkedIn</h4>
+                                <a href="https://www.linkedin.com/in/toddeh" target="_blank" class="text-[#d1d5db] hover:text-[#ff6b35] transition-colors">linkedin.com/in/toddeh</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="py-8 border-t border-[#2d2d32]">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p class="text-[#d1d5db]">© 2024 Toddeh Alexander. All rights reserved.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="https://github.com/toddehalexander" class="text-[#d1d5db] hover:text-[#ff6b35] transition-colors">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/toddeh" class="text-[#d1d5db] hover:text-[#ff6b35] transition-colors">
+                        <i class="fab fa-linkedin text-xl"></i>
+                    </a>
+                    <a href="mailto:AlexanderToddeh@gmail.com" class="text-[#d1d5db] hover:text-[#ff6b35] transition-colors">
+                        <i class="fas fa-envelope text-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script>
-      const canvas = document.getElementById("spaceCanvas");
-      const ctx = canvas.getContext("2d");
-      const content = document.getElementById("content");
-      const hideButton = document.getElementById("hideButton");
-
-      let dots = [];
-      const maxDistance = 100;
-      const mouseRadius = 100;
-      let mouseX = canvas.width / 2;
-      let mouseY = canvas.height / 2;
-
-      class Dot {
-        constructor(x, y, vx, vy) {
-          this.x = x;
-          this.y = y;
-          this.vx = vx;
-          this.vy = vy;
-          this.radius = 2;
-          this.color = "#d1d1d6"; // Default color (gray)
-        }
-
-        update() {
-          this.x += this.vx;
-          this.y += this.vy;
-
-          if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
-          if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
-
-          const dx = this.x - mouseX;
-          const dy = this.y - mouseY;
-          const distance = Math.sqrt(dx * dx + dy * dy);
-
-          if (distance < mouseRadius) {
-            this.color = `rgba(255, 0, 0, ${1 - distance / mouseRadius})`; // Red color with fade effect
-          } else {
-            this.color = "#d1d1d6"; // Default color (gray)
-          }
-        }
-
-        draw() {
-          ctx.beginPath();
-          ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-          ctx.fillStyle = this.color;
-          ctx.fill();
-          ctx.closePath();
-        }
-      }
-
-      function connectDots() {
-        for (let i = 0; i < dots.length; i++) {
-          for (let j = i + 1; j < dots.length; j++) {
-            const dx = dots[i].x - dots[j].x;
-            const dy = dots[i].y - dots[j].y;
-            const distance = Math.sqrt(dx * dx + dy * dy);
-
-            if (distance < maxDistance) {
-              ctx.beginPath();
-              ctx.moveTo(dots[i].x, dots[i].y);
-              ctx.lineTo(dots[j].x, dots[j].y);
-              ctx.strokeStyle = `rgba(255, 255, 255, ${
-                1 - distance / maxDistance
-              })`;
-              ctx.lineWidth = 0.5;
-              ctx.stroke();
-              ctx.closePath();
-            }
-          }
-        }
-      }
-
-      function resizeCanvas() {
-        const pixelRatio = window.devicePixelRatio || 1;
-
-        // Save the old width and height
-        const oldWidth = canvas.width / pixelRatio;
-        const oldHeight = canvas.height / pixelRatio;
-
-        // Update the canvas width and height to match the window size and pixel ratio
-        canvas.width = window.innerWidth * pixelRatio;
-        canvas.height = window.innerHeight * pixelRatio;
-
-        // Scale the context to the pixel ratio to avoid blurry rendering
-        ctx.scale(pixelRatio, pixelRatio);
-
-        // Scale dots' positions and velocities to the new canvas size
-        const widthRatio = canvas.width / (oldWidth * pixelRatio);
-        const heightRatio = canvas.height / (oldHeight * pixelRatio);
-
-        dots.forEach((dot) => {
-          dot.x *= widthRatio;
-          dot.y *= heightRatio;
-          dot.vx *= widthRatio;
-          dot.vy *= heightRatio;
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
         });
-      }
-
-      function animate() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-        dots.forEach((dot) => {
-          dot.update();
-          dot.draw();
+        
+        // Close mobile menu when clicking on a link
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
         });
-
-        connectDots();
-        requestAnimationFrame(animate);
-      }
-
-      function init() {
-        dots = []; // Clear existing dots
-        const dotCount = 100; // Number of dots
-
-        for (let i = 0; i < dotCount; i++) {
-          const x =
-            (Math.random() * canvas.width) / (window.devicePixelRatio || 1);
-          const y =
-            (Math.random() * canvas.height) / (window.devicePixelRatio || 1);
-          const vx = (Math.random() - 0.5) * 2;
-          const vy = (Math.random() - 0.5) * 2;
-
-          dots.push(new Dot(x, y, vx, vy));
-        }
-
-        animate();
-      }
-
-      // Handle touch and mouse events
-      function handleInteraction(event) {
-        let x, y;
-
-        if (event.touches && event.touches.length > 0) {
-          x = event.touches[0].clientX;
-          y = event.touches[0].clientY;
-        } else {
-          x = event.clientX;
-          y = event.clientY;
-        }
-
-        mouseX = x;
-        mouseY = y;
-      }
-
-      // Initial canvas setup
-      function setupCanvas() {
-        resizeCanvas();
-        init();
-      }
-
-      // Event listeners
-      window.addEventListener("resize", () => {
-        resizeCanvas(); // Adjust canvas size and dot properties
-      });
-      window.addEventListener("mousemove", handleInteraction);
-      window.addEventListener("touchstart", handleInteraction);
-      window.addEventListener("touchmove", handleInteraction);
-      hideButton.addEventListener("click", () => {
-        if (content.classList.contains("hidden")) {
-          content.classList.remove("hidden");
-          hideButton.textContent = "Hide Text";
-        } else {
-          content.classList.add("hidden");
-          hideButton.textContent = "Show Text";
-        }
-      });
-
-      // Initialize the canvas
-      setupCanvas();
+        
+        // Intersection Observer for scroll animations
+        const sections = document.querySelectorAll('.section');
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+        
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+        
+        // Highlight active nav link based on scroll position
+        const navLinks = document.querySelectorAll('.nav-link');
+        
+        window.addEventListener('scroll', () => {
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if (pageYOffset >= (sectionTop - 300)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
     </script>
-  </body>
+</body>
 </html>
