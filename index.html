@@ -3,702 +3,512 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="The official portfolio of Toddeh Alexander showcasing professional experience, projects, technical skills, and contact information.">
-    <meta name="keywords" content="Toddeh Alexander, Portfolio, Network Engineer, Software Developer, Cybersecurity, Projects, Skills">
+    
+    <title>Toddeh Alexander - Portfolio | Software Engineer & Developer</title>
+    <meta name="title" content="Toddeh Alexander - Portfolio | Software Engineer & Developer">
+    <meta name="description" content="Toddeh Alexander's professional portfolio. Experienced software engineer and web developer. View my projects, skills, and get in touch for collaborations.">
+    <meta name="keywords" content="Toddeh Alexander, Todd Alexander, portfolio, web developer, software engineer, full stack developer, front end developer, back end developer, programmer, coding, JavaScript, HTML, CSS, React, Node.js, web development, software development">
     <meta name="author" content="Toddeh Alexander">
-    <meta property="og:title" content="Toddeh Alexander | Portfolio">
-    <meta property="og:description" content="Explore Toddeh Alexander's portfolio including experience, projects, technical skills, and contact information.">
-    <meta property="og:image" content="/assets/portfolio-thumbnail.png">
-    <meta property="og:site_name" content="Toddeh Alexander's Portfolio">
     <meta name="robots" content="index, follow">
-    <title>Toddeh Alexander | Portfolio</title>
-    <!-- Favicon -->
-    <link rel="icon" href="/assets/favicon/favicon.ico" type="image/x-icon" />
-    <link rel="icon" href="/assets/favicon/favicon-16x16.png" type="image/png" sizes="16x16" />
-    <link rel="icon" href="/assets/favicon/favicon-32x32.png" type="image/png" sizes="32x32" />
-    <link rel="icon" href="/assets/favicon/android-chrome-192x192.png" type="image/png" sizes="196x196" />
-    <link rel="icon" href="/assets/favicon/android-chrome-512x512.png" type="image/png" sizes="512x512" />
-    <link rel="apple-touch-icon" href="/assets/favicon/apple-touch-icon.png" />
-    <!-- END Favicon -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourdomain.com/">
+    <meta property="og:title" content="Toddeh Alexander - Portfolio | Software Engineer & Developer">
+    <meta property="og:description" content="Toddeh Alexander's professional portfolio. Experienced software engineer and web developer. View my projects, skills, and get in touch for collaborations.">
+    <meta property="og:image" content="https://yourdomain.com/preview-image.jpg">
+    <meta property="og:site_name" content="Toddeh Alexander Portfolio">
+    
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://yourdomain.com/">
+    <meta property="twitter:title" content="Toddeh Alexander - Portfolio | Software Engineer & Developer">
+    <meta property="twitter:description" content="Toddeh Alexander's professional portfolio. Experienced software engineer and web developer. View my projects, skills, and get in touch for collaborations.">
+    <meta property="twitter:image" content="https://yourdomain.com/preview-image.jpg">
+    
+    <link rel="canonical" href="https://yourdomain.com/">
+    <meta name="theme-color" content="#282c34">
+    
+    <link rel="icon" type="image/x-icon" href="/assets/favicon/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/assets/favicon/site.webmanifest">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Toddeh Alexander",
+      "alternateName": "Todd Alexander",
+      "url": "https://yourdomain.com",
+      "jobTitle": "Software Engineer",
+      "description": "Professional software engineer specializing in full-stack development",
+      "sameAs": [
+        "https://www.linkedin.com/in/toddeh/",
+        "https://github.com/toddehalexander"
+      ]
+    }
+    </script>
+    
     <style>
-        :root {
-            --primary-bg: #0f0f10;
-            --secondary-bg: #1a1a1d;
-            --accent: #ff6b35;
-            --text-primary: #ffffff;
-            --text-secondary: #d1d5db;
-            --border: #2d2d32;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        
+
         body {
-            background-color: var(--primary-bg);
-            color: var(--text-primary);
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            scroll-behavior: smooth;
-        }
-        
-        .glass-card {
-            background: rgba(26, 26, 29, 0.7);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border: 1px solid var(--border);
-        }
-        
-        .section {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
-        
-        .section.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        .nav-link {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #282c34; 
+            overflow: hidden;
             position: relative;
         }
-        
-        .nav-link::after {
-            content: '';
+
+        #canvas {
             position: absolute;
-            bottom: -2px;
+            top: 0;
             left: 0;
-            width: 0;
-            height: 2px;
-            background-color: var(--accent);
-            transition: width 0.3s ease;
-        }
-        
-        .nav-link:hover::after {
             width: 100%;
-        }
-        
-        .nav-link.active::after {
-            width: 100%;
-        }
-        
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: -24px;
-            top: 0;
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background-color: var(--accent);
-            border: 2px solid var(--secondary-bg);
-        }
-        
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: -18px;
-            top: 0;
             height: 100%;
-            width: 2px;
-            background-color: var(--border);
         }
-        
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+
+        .container {
+            text-align: center;
+            color: white;
+            z-index: 10;
+            padding: 40px;
+            animation: fadeIn 1s ease-in;
+            position: relative;
         }
-        
-        .skill-tag:hover {
-            transform: scale(1.05);
-        }
-        
-        @keyframes float {
-            0%, 100% {
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
                 transform: translateY(0);
             }
-            50% {
-                transform: translateY(-10px);
-            }
         }
-        
-        .floating {
-            animation: float 6s ease-in-out infinite;
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 0 0 20px rgba(220, 53, 69, 0.5);
+            background: linear-gradient(135deg, #dc3545 0%, #ffffff 50%, #0d6efd 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
-        
-        .highlight {
+
+        p {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px 35px;
+            background: rgba(13, 110, 253, 0.1);
+            border: 2px solid rgba(13, 110, 253, 0.5);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            cursor: pointer;
             position: relative;
-            display: inline-block;
+            overflow: hidden;
         }
-        
-        .highlight::after {
+
+        .btn::before {
             content: '';
             position: absolute;
-            bottom: 0;
-            left: 0;
+            top: 0;
+            left: -100%;
             width: 100%;
-            height: 30%;
-            background-color: var(--accent);
-            opacity: 0.3;
-            z-index: -1;
-            transition: height 0.3s ease;
-        }
-        
-        .highlight:hover::after {
             height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .btn:hover {
+            background: rgba(13, 110, 253, 0.2);
+            border-color: rgba(13, 110, 253, 0.8);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(13, 110, 253, 0.3);
+        }
+
+        .btn svg {
+            width: 24px;
+            height: 24px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .btn span {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* --- Score Zone Styling --- */
+        #score-zone {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            width: 150px;
+            height: 60px;
+            padding: 10px;
+            border: 2px dashed rgba(255, 255, 255, 0.5);
+            border-radius: 10px;
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(5px);
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 600;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            user-select: none;
+            z-index: 20;
+            transition: background 0.2s;
+        }
+
+        #score-zone span {
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        #score-zone.hit {
+            background: rgba(220, 53, 69, 0.5);
+            border-color: #dc3545;
+        }
+        /* ------------------------------ */
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            p {
+                font-size: 1.1rem;
+            }
+
+            .buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 250px;
+            }
+
+            #score-zone {
+                bottom: 10px;
+                right: 10px;
+                width: 120px;
+                height: 50px;
+                font-size: 1rem;
+            }
+            #score-zone span {
+                font-size: 0.7rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .container {
+                padding: 20px;
+            }
         }
     </style>
 </head>
-<body class="min-h-screen">
-    <!-- Header -->
-    <header class="fixed top-0 left-0 right-0 z-50 bg-[#0f0f10]/90 backdrop-blur-md border-b border-[#2d2d32]">
-        <div class="container mx-auto px-6 py-4">
-            <div class="flex justify-between items-center">
-                <a href="#" class="text-2xl font-bold text-white hover:text-[#ff6b35] transition-colors">
-                    <span class="highlight">Toddeh</span> Alexander
-                </a>
-                
-                <nav class="hidden md:flex space-x-8">
-                    <a href="#home" class="nav-link text-white hover:text-[#ff6b35] transition-colors">Home</a>
-                    <a href="#experience" class="nav-link text-white hover:text-[#ff6b35] transition-colors">Experience</a>
-                    <a href="#projects" class="nav-link text-white hover:text-[#ff6b35] transition-colors">Projects</a>
-                    <a href="#skills" class="nav-link text-white hover:text-[#ff6b35] transition-colors">Skills</a>
-                    <a href="#contact" class="nav-link text-white hover:text-[#ff6b35] transition-colors">Contact</a>
-                </nav>
-                
-                <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
-                    <i class="fas fa-bars text-xl"></i>
-                </button>
-            </div>
-        </div>
+<body>
+    <canvas id="canvas"></canvas>
+
+    <div class="container">
+        <h1>Toddeh Alexander</h1>
+        <p>Portfolio Coming Soon</p>
         
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 right-0 bg-[#1a1a1d] border-t border-[#2d2d32]">
-            <div class="container mx-auto px-6 py-4">
-                <div class="flex flex-col space-y-4">
-                    <a href="#home" class="text-white hover:text-[#ff6b35] transition-colors">Home</a>
-                    <a href="#experience" class="text-white hover:text-[#ff6b35] transition-colors">Experience</a>
-                    <a href="#projects" class="text-white hover:text-[#ff6b35] transition-colors">Projects</a>
-                    <a href="#skills" class="text-white hover:text-[#ff6b35] transition-colors">Skills</a>
-                    <a href="#contact" class="text-white hover:text-[#ff6b35] transition-colors">Contact</a>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section id="home" class="min-h-screen flex items-center pt-20">
-        <div class="container mx-auto px-6 py-20">
-            <div class="flex flex-col md:flex-row items-center">
-                <div class="md:w-1/2 mb-12 md:mb-0">
-                    <h1 class="text-4xl md:text-6xl font-bold mb-4">
-                        Hi, I'm <span class="text-[#ff6b35]">Toddeh</span> Alexander
-                    </h1>
-                    <h2 class="text-2xl md:text-3xl font-medium mb-6 text-[#d1d5db]">
-                        Welcome to my portfolio! 👋
-                    </h2>
-                    <p class="text-lg text-[#d1d5db] mb-8 max-w-lg">
-                        I'm passionate about building secure, reliable technology solutions that make a real difference.
-                    </p>
-                      <div class="flex space-x-4">
-                          <a href="#contact" class="px-6 py-3 bg-[#ff6b35] text-white rounded-md hover:bg-[#e05d2e] transition-colors">
-                              Contact Me
-                          </a>
-                          <!-- <a href="#projects" class="px-6 py-3 border border-[#2d2d32] text-white rounded-md hover:bg-[#1a1a1d] transition-colors">
-                              View Projects
-                          </a> -->
-                          <!-- Resume Button -->
-                          <a href="/resume/Toddeh_Alexander_Resume_8.27.25.pdf"
-                              target="_blank"
-                              class="px-6 py-3 border border-[#2d2d32] text-white rounded-md hover:bg-[#1a1a1d] transition-colors flex items-center">
-                              <i class="fas fa-file-alt mr-2"></i>
-                              View Resume
-                          </a>
-                      </div>
-                </div>
-                <div class="md:w-1/2 flex justify-center">
-                    <div class="relative w-64 h-64 md:w-80 md:h-80">
-                        <div class="absolute inset-0 bg-[#ff6b35] rounded-full opacity-20 blur-xl"></div>
-                        <div class="relative w-full h-full flex items-center justify-center floating">
-                            <div class="w-48 h-48 md:w-64 md:h-64 bg-gradient-to-br from-[#1a1a1d] to-[#0f0f10] rounded-full border border-[#2d2d32] flex items-center justify-center">
-                                <i class="fas fa-network-wired text-6xl md:text-8xl text-[#ff6b35]"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience" class="py-20 bg-[#1a1a1d] section">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold mb-2 text-center">
-                <span class="highlight">Professional</span> Experience
-            </h2>
-            <p class="text-[#d1d5db] text-center mb-12 max-w-2xl mx-auto">
-                My journey through the world of network engineering and cybersecurity
-            </p>
+        <div class="buttons">
+            <a href="https://www.linkedin.com/in/toddeh/" class="btn" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                </svg>
+                <span>LinkedIn</span>
+            </a>
             
-            <div class="relative max-w-4xl mx-auto">
-                <div class="timeline pl-8">
-                    <!-- Honda Racing Corporation -->
-                    <div class="timeline-item relative mb-12 glass-card p-6 rounded-lg border border-[#2d2d32]">
-                        <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
-                            <h3 class="text-xl font-bold text-[#ff6b35]">Network Engineer</h3>
-                            <span class="text-sm text-[#d1d5db]">October 2024 - Present</span>
-                        </div>
-                        <h4 class="text-lg font-medium mb-2">Honda Racing Corporation (HRC) • Santa Clarita, California</h4>
-                        <ul class="list-disc pl-5 space-y-2 text-[#d1d5db]">
-                            <li>Provide real-time network infrastructure and communications support during live IndyCar and IMSA racing events, maintaining 99.9% uptime and secure high-speed connectivity for 35+ trackside engineers</li>
-                            <li>Design, configure, and deploy enterprise LAN infrastructure with Aruba 6405 switches in dual-core architecture and 3 edge switches</li>
-                            <li>Deploy and configure 12+ Cisco Firepower 2100 firewalls, successfully migrating 300+ NAT rules and ACLs from legacy ASA units</li>
-                            <li>Administer 150+ Azure Windows Server VMs and core infrastructure services ensuring 99.9% uptime for engineering workloads</li>
-                        </ul>
-                    </div>
-                    
-                    <!-- Kayne Anderson Rudnick -->
-                    <div class="timeline-item relative mb-12 glass-card p-6 rounded-lg border border-[#2d2d32]">
-                        <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
-                            <h3 class="text-xl font-bold text-[#ff6b35]">Information Technology Technician - Intern</h3>
-                            <span class="text-sm text-[#d1d5db]">January 2022 - August 2022</span>
-                        </div>
-                        <h4 class="text-lg font-medium mb-2">Kayne Anderson Rudnick • Los Angeles, CA</h4>
-                        <ul class="list-disc pl-5 space-y-2 text-[#d1d5db]">
-                            <li>Designed, assembled, and constructed a 500-square-foot server room, racked 10 Cisco switches and routers, assisted in managing storage, network configuration, and power management</li>
-                            <li>Streamlined inventory management by cataloging and audits, saving 20+ hours per week, improving product forecasting</li>
-                            <li>Delivered technical support to 50+ employees, addressing OS (Windows, macOS, Linux), hardware and software issues</li>
-                        </ul>
-                    </div>
-                    
-                    <!-- Glendale Community College -->
-                    <div class="timeline-item relative glass-card p-6 rounded-lg border border-[#2d2d32]">
-                        <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
-                            <h3 class="text-xl font-bold text-[#ff6b35]">Student Ambassador</h3>
-                            <span class="text-sm text-[#d1d5db]">March 2021 - June 2022</span>
-                        </div>
-                        <h4 class="text-lg font-medium mb-2">Glendale Community College • Glendale, CA</h4>
-                        <ul class="list-disc pl-5 space-y-2 text-[#d1d5db]">
-                            <li>Delivered comprehensive and effective assistance to 100+ students daily by guiding them through their onboarding phase in both online and in-person environments</li>
-                            <li>Reached over 25,000 students by creating YouTube videos to help students navigate online & remote environment</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+            <a href="https://github.com/toddehalexander" class="btn" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                </svg>
+                <span>GitHub</span>
+            </a>
         </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="py-20 section">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold mb-2 text-center">
-                <span class="highlight">Software</span> Projects
-            </h2>
-            <p class="text-[#d1d5db] text-center mb-12 max-w-2xl mx-auto">
-                My personal and professional development projects showcasing my technical skills
-            </p>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Pokemon Master -->
-                <div class="project-card glass-card p-6 rounded-lg border border-[#2d2d32] transition-all duration-300">
-                    <div class="flex justify-between items-start mb-4">
-                        <h3 class="text-xl font-bold text-[#ff6b35]">Pokemon Master</h3>
-                        <span class="text-sm text-[#d1d5db]">May 2024</span>
-                    </div>
-                    <p class="text-[#d1d5db] mb-4">
-                        Engineered a full-stack web application with React frontend and Flask backend, enabling real-time Pokemon battles against AI opponents powered by minimax algorithms with alpha-beta pruning.
-                    </p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="skill-tag px-3 py-1 bg-[#1a1a1d] text-sm rounded-full border border-[#2d2d32] transition-transform">React</span>
-                        <span class="skill-tag px-3 py-1 bg-[#1a1a1d] text-sm rounded-full border border-[#2d2d32] transition-transform">Python</span>
-                        <span class="skill-tag px-3 py-1 bg-[#1a1a1d] text-sm rounded-full border border-[#2d2d32] transition-transform">Flask</span>
-                        <span class="skill-tag px-3 py-1 bg-[#1a1a1d] text-sm rounded-full border border-[#2d2d32] transition-transform">OpenAI</span>
-                    </div>
-                    <a href="https://github.com/toddehalexander/PokemonMaster" class="text-[#ff6b35] hover:underline flex items-center">
-                        <i class="fab fa-github mr-2"></i> View on GitHub
-                    </a>
-                </div>
-                
-                <!-- Imgur Clone -->
-                <div class="project-card glass-card p-6 rounded-lg border border-[#2d2d32] transition-all duration-300">
-                    <div class="flex justify-between items-start mb-4">
-                        <h3 class="text-xl font-bold text-[#ff6b35]">Imgur Clone</h3>
-                        <span class="text-sm text-[#d1d5db]">May 2024</span>
-                    </div>
-                    <p class="text-[#d1d5db] mb-4">
-                        Developed a secure web application using PHP and MySQL allowing users to upload images with client and server-side validation, implementing Docker containerization for version control.
-                    </p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="skill-tag px-3 py-1 bg-[#1a1a1d] text-sm rounded-full border border-[#2d2d32] transition-transform">PHP</span>
-                        <span class="skill-tag px-3 py-1 bg-[#1a1a1d] text-sm rounded-full border border-[#2d2d32] transition-transform">MySQL</span>
-                        <span class="skill-tag px-3 py-1 bg-[#1a1a1d] text-sm rounded-full border border-[#2d2d32] transition-transform">JavaScript</span>
-                        <span class="skill-tag px-3 py-1 bg-[#1a1a1d] text-sm rounded-full border border-[#2d2d32] transition-transform">Docker</span>
-                    </div>
-                    <a href="https://github.com/toddehalexander/Imgur-Clone" class="text-[#ff6b35] hover:underline flex items-center">
-                        <i class="fab fa-github mr-2"></i> View on GitHub
-                    </a>
-                </div>
-                
-                <!-- GitHub Push Checker -->
-                <div class="project-card glass-card p-6 rounded-lg border border-[#2d2d32] transition-all duration-300">
-                    <div class="flex justify-between items-start mb-4">
-                        <h3 class="text-xl font-bold text-[#ff6b35]">GitHub Push Checker</h3>
-                        <span class="text-sm text-[#d1d5db]">March 2024</span>
-                    </div>
-                    <p class="text-[#d1d5db] mb-4">
-                        Constructed Chrome extension using JavaScript to track GitHub push events, achieving over 500 impressions and a 5-star rating on the Chrome Web Store with 98% user retention rate.
-                    </p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="skill-tag px-3 py-1 bg-[#1a1a1d] text-sm rounded-full border border-[#2d2d32] transition-transform">JavaScript</span>
-                        <span class="skill-tag px-3 py-1 bg-[#1a1a1d] text-sm rounded-full border border-[#2d2d32] transition-transform">Chrome API</span>
-                        <span class="skill-tag px-3 py-1 bg-[#1a1a1d] text-sm rounded-full border border-[#2d2d32] transition-transform">GitHub API</span>
-                    </div>
-                    <a href="https://github.com/toddehalexander/PushChecker" class="text-[#ff6b35] hover:underline flex items-center">
-                        <i class="fab fa-github mr-2"></i> View on GitHub
-                    </a>
-                </div>
-                
-                <!-- AI Educational Chatbot -->
-                <div class="project-card glass-card p-6 rounded-lg border border-[#2d2d32] transition-all duration-300">
-                    <div class="flex justify-between items-start mb-4">
-                        <h3 class="text-xl font-bold text-[#ff6b35]">AI Educational Chatbot</h3>
-                        <span class="text-sm text-[#d1d5db]">February 2024</span>
-                    </div>
-                    <p class="text-[#d1d5db] mb-4">
-                        Led a 4-person development team in a 24-hour hackathon, winning the "Most Daily Use/Practical" award for a chatbot capable of accurately answering questions using textbook content.
-                    </p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="skill-tag px-3 py-1 bg-[#1a1a1d] text-sm rounded-full border border-[#2d2d32] transition-transform">React</span>
-                        <span class="skill-tag px-3 py-1 bg-[#1a1a1d] text-sm rounded-full border border-[#2d2d32] transition-transform">Flask</span>
-                        <span class="skill-tag px-3 py-1 bg-[#1a1a1d] text-sm rounded-full border border-[#2d2d32] transition-transform">Docker</span>
-                        <span class="skill-tag px-3 py-1 bg-[#1a1a1d] text-sm rounded-full border border-[#2d2d32] transition-transform">OpenAI</span>
-                        <span class="skill-tag px-3 py-1 bg-[#1a1a1d] text-sm rounded-full border border-[#2d2d32] transition-transform">Llama Index</span>
-                    </div>
-                    <a href="https://github.com/toddehalexander/Educational-Textbook-Chatbot" class="text-[#ff6b35] hover:underline flex items-center">
-                        <i class="fab fa-github mr-2"></i> View on GitHub
-                    </a>
-                </div>
-                
-                <!-- Code Racer -->
-                <div class="project-card glass-card p-6 rounded-lg border border-[#2d2d32] transition-all duration-300">
-                    <div class="flex justify-between items-start mb-4">
-                        <h3 class="text-xl font-bold text-[#ff6b35]">Code Racer</h3>
-                        <span class="text-sm text-[#d1d5db]">June 2023</span>
-                    </div>
-                    <p class="text-[#d1d5db] mb-4">
-                        Developed a web application focused on enhancing users' typing speed and accuracy while teaching 10+ sorting algorithms, implementing AES 256-bit encryption and accommodating 1,000 concurrent users.
-                    </p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="skill-tag px-3 py-1 bg-[#1a1a1d] text-sm rounded-full border border-[#2d2d32] transition-transform">JavaScript</span>
-                        <span class="skill-tag px-3 py-1 bg-[#1a1a1d] text-sm rounded-full border border-[#2d2d32] transition-transform">Firebase</span>
-                        <span class="skill-tag px-3 py-1 bg-[#1a1a1d] text-sm rounded-full border border-[#2d2d32] transition-transform">HTML/CSS</span>
-                    </div>
-                    <a href="https://github.com/toddehalexander/CodeRacer" class="text-[#ff6b35] hover:underline flex items-center">
-                        <i class="fab fa-github mr-2"></i> View on GitHub
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="py-20 bg-[#1a1a1d] section">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold mb-2 text-center">
-                <span class="highlight">Technical</span> Skills
-            </h2>
-            <p class="text-[#d1d5db] text-center mb-12 max-w-2xl mx-auto">
-                My expertise across various domains of network engineering and software development
-            </p>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- Network & Infrastructure -->
-                <div class="glass-card p-6 rounded-lg border border-[#2d2d32]">
-                    <h3 class="text-xl font-bold text-[#ff6b35] mb-4 flex items-center">
-                        <i class="fas fa-network-wired mr-3"></i> Network & Infrastructure
-                    </h3>
-                    <ul class="space-y-2">
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-[#ff6b35] mr-2"></i>
-                            <span>Cisco FTD/ASA</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-[#ff6b35] mr-2"></i>
-                            <span>Aruba AOS-CX</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-[#ff6b35] mr-2"></i>
-                            <span>IPsec VPN</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-[#ff6b35] mr-2"></i>
-                            <span>Windows Server</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-[#ff6b35] mr-2"></i>
-                            <span>Active Directory</span>
-                        </li>
-                    </ul>
-                </div>
-                
-                <!-- Security & Monitoring -->
-                <div class="glass-card p-6 rounded-lg border border-[#2d2d32]">
-                    <h3 class="text-xl font-bold text-[#ff6b35] mb-4 flex items-center">
-                        <i class="fas fa-shield-alt mr-3"></i> Security & Monitoring
-                    </h3>
-                    <ul class="space-y-2">
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-[#ff6b35] mr-2"></i>
-                            <span>Qualys VMDR</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-[#ff6b35] mr-2"></i>
-                            <span>CrowdStrike</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-[#ff6b35] mr-2"></i>
-                            <span>SolarWinds SNMPv3</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-[#ff6b35] mr-2"></i>
-                            <span>Vulnerability Management</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-[#ff6b35] mr-2"></i>
-                            <span>Nmap</span>
-                        </li>
-                    </ul>
-                </div>
-                
-                <!-- Development & Scripting -->
-                <div class="glass-card p-6 rounded-lg border border-[#2d2d32]">
-                    <h3 class="text-xl font-bold text-[#ff6b35] mb-4 flex items-center">
-                        <i class="fas fa-code mr-3"></i> Development & Scripting
-                    </h3>
-                    <ul class="space-y-2">
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-[#ff6b35] mr-2"></i>
-                            <span>Python, C++, JavaScript</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-[#ff6b35] mr-2"></i>
-                            <span>React, Node.js, Flask</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-[#ff6b35] mr-2"></i>
-                            <span>PowerShell, Bash</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-[#ff6b35] mr-2"></i>
-                            <span>Docker, Git, CI/CD</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-[#ff6b35] mr-2"></i>
-                            <span>MySQL, Firebase, PHP</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            
-            <!-- Certifications -->
-            <div class="mt-12 glass-card p-6 rounded-lg border border-[#2d2d32] max-w-4xl mx-auto">
-                <h3 class="text-xl font-bold text-[#ff6b35] mb-4 flex items-center">
-                    <i class="fas fa-certificate mr-3"></i> Certifications
-                </h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div class="flex items-start">
-                        <div class="bg-[#ff6b35] text-white p-2 rounded-md mr-4">
-                            <i class="fas fa-award"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-medium">Azure Administrator Associate (AZ-104)</h4>
-                            <p class="text-sm text-[#d1d5db]">Completed July 2025</p>
-                        </div>
-                    </div>
-                    <div class="flex items-start">
-                        <div class="bg-[#ff6b35] text-white p-2 rounded-md mr-4">
-                            <i class="fas fa-award"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-medium">Aruba OS-CX Switching Fundamentals</h4>
-                            <p class="text-sm text-[#d1d5db]">Completed Aug 2025</p>
-                        </div>
-                    </div>
-                    <div class="flex items-start">
-                        <div class="bg-[#ff6b35] text-white p-2 rounded-md mr-4">
-                            <i class="fas fa-award"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-medium">Azure Developer Associate (AZ-204)</h4>
-                            <p class="text-sm text-[#d1d5db]">In Progress – Expected September 2025</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Education Section -->
-    <section class="py-12 section">
-        <div class="container mx-auto px-6">
-            <div class="glass-card p-8 rounded-lg border border-[#2d2d32] max-w-4xl mx-auto">
-                <div class="flex flex-col md:flex-row items-center">
-                    <div class="md:w-1/3 flex justify-center mb-6 md:mb-0">
-                        <div class="w-24 h-24 rounded-full bg-[#1a1a1d] border border-[#2d2d32] flex items-center justify-center">
-                            <i class="fas fa-graduation-cap text-3xl text-[#ff6b35]"></i>
-                        </div>
-                    </div>
-                    <div class="md:w-2/3 text-center md:text-left">
-                        <h3 class="text-2xl font-bold mb-2">California State University-Fullerton</h3>
-                        <p class="text-lg text-[#d1d5db] mb-2">Bachelor of Science in Computer Science | Minor in Cybersecurity</p>
-                        <p class="text-[#d1d5db]">December 2024 • Fullerton, CA</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-[#1a1a1d] section">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold mb-2 text-center">
-                <span class="highlight">Get In</span> Touch
-            </h2>
-            <p class="text-[#d1d5db] text-center mb-12 max-w-2xl mx-auto">
-                Feel free to reach out for collaborations or just a friendly hello
-            </p>
-            
-            <div class="max-w-md mx-auto">
-                <div class="glass-card p-8 rounded-lg border border-[#2d2d32]">
-                    <h3 class="text-xl font-bold text-[#ff6b35] mb-6 text-center">Contact Information</h3>
-                    <ul class="space-y-4">
-                        <li class="flex items-start">
-                            <div class="bg-[#ff6b35] text-white p-2 rounded-md mr-4">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-medium">Email</h4>
-                                <a href="mailto:AlexanderToddeh@gmail.com" class="text-[#d1d5db] hover:text-[#ff6b35] transition-colors">AlexanderToddeh@gmail.com</a>
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <div class="bg-[#ff6b35] text-white p-2 rounded-md mr-4">
-                                <i class="fab fa-github"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-medium">GitHub</h4>
-                                <a href="https://github.com/toddehalexander" target="_blank" class="text-[#d1d5db] hover:text-[#ff6b35] transition-colors">github.com/toddehalexander</a>
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <div class="bg-[#ff6b35] text-white p-2 rounded-md mr-4">
-                                <i class="fab fa-linkedin"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-medium">LinkedIn</h4>
-                                <a href="https://www.linkedin.com/in/toddeh" target="_blank" class="text-[#d1d5db] hover:text-[#ff6b35] transition-colors">linkedin.com/in/toddeh</a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Footer -->
-    <footer class="py-8 border-t border-[#2d2d32]">
-        <div class="container mx-auto px-6">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-4 md:mb-0">
-                    <p class="text-[#d1d5db]">© 2024 Toddeh Alexander. All rights reserved.</p>
-                </div>
-                <div class="flex space-x-6">
-                    <a href="https://github.com/toddehalexander" class="text-[#d1d5db] hover:text-[#ff6b35] transition-colors">
-                        <i class="fab fa-github text-xl"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/toddeh" class="text-[#d1d5db] hover:text-[#ff6b35] transition-colors">
-                        <i class="fab fa-linkedin text-xl"></i>
-                    </a>
-                    <a href="mailto:AlexanderToddeh@gmail.com" class="text-[#d1d5db] hover:text-[#ff6b35] transition-colors">
-                        <i class="fas fa-envelope text-xl"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </footer>
+    </div>
+    
+    <div id="score-zone">
+        <span>Push a particle here for a point!</span>
+        <div id="current-score">Score: 0</div>
+    </div>
 
     <script>
-        // Mobile menu toggle
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        const scoreZone = document.getElementById('score-zone');
+        const currentScoreDisplay = document.getElementById('current-score');
         
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
+        let width = canvas.width = window.innerWidth;
+        let height = canvas.height = window.innerHeight;
+        let score = 0;
         
-        // Close mobile menu when clicking on a link
-        const mobileLinks = mobileMenu.querySelectorAll('a');
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
-        });
+        // Particle system setup
+        const particles = [];
+        const particleCount = width < 768 ? 50 : 100;
+        const connectionDistance = 150;
         
-        // Intersection Observer for scroll animations
-        const sections = document.querySelectorAll('.section');
+        // Mouse/cursor position
+        const mouse = { x: null, y: null, radius: 150 }; 
         
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, {
-            threshold: 0.1
-        });
+        const colors = [
+            { r: 220, g: 53, b: 69 },   // Red
+            { r: 255, g: 255, b: 255 }, // White
+            { r: 13, g: 110, b: 253 }   // Blue
+        ];
+
+        // Score Zone boundary reference (will be updated on resize)
+        let scoreZoneRect = scoreZone.getBoundingClientRect();
         
-        sections.forEach(section => {
-            observer.observe(section);
-        });
-        
-        // Highlight active nav link based on scroll position
-        const navLinks = document.querySelectorAll('.nav-link');
-        
-        window.addEventListener('scroll', () => {
-            let current = '';
+        function updateScoreZoneRect() {
+            scoreZoneRect = scoreZone.getBoundingClientRect();
+        }
+
+        class Particle {
+            constructor(x, y) {
+                this.x = x || Math.random() * width;
+                this.y = y || Math.random() * height;
+                this.vx = (Math.random() - 0.5) * 1;
+                this.vy = (Math.random() - 0.5) * 1;
+                this.radius = Math.random() * 2 + 1;
+                this.color = colors[Math.floor(Math.random() * colors.length)];
+                this.isScored = false; // Flag to prevent rapid scoring of the same particle
+            }
             
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
+            update() {
+                this.x += this.vx;
+                this.y += this.vy;
                 
-                if (pageYOffset >= (sectionTop - 300)) {
-                    current = section.getAttribute('id');
+                // Bounce off edges with position correction
+                if (this.x < 0) {
+                    this.x = 0;
+                    this.vx = Math.abs(this.vx);
                 }
+                if (this.x > width) {
+                    this.x = width;
+                    this.vx = -Math.abs(this.vx);
+                }
+                if (this.y < 0) {
+                    this.y = 0;
+                    this.vy = Math.abs(this.vy);
+                }
+                if (this.y > height) {
+                    this.y = height;
+                    this.vy = -Math.abs(this.vy);
+                }
+                
+                // --- MOUSE REPULSION (The "Pushing" Mechanic) ---
+                if (mouse.x !== null && mouse.y !== null) {
+                    const dx = mouse.x - this.x;
+                    const dy = mouse.y - this.y;
+                    const distance = Math.sqrt(dx * dx + dy * dy);
+                    
+                    if (distance < mouse.radius) {
+                        const force = (mouse.radius - distance) / mouse.radius;
+                        const angle = Math.atan2(dy, dx);
+                        // Repel (subtracting from velocity pushes it away)
+                        this.vx -= Math.cos(angle) * force * 1.5; // Increased push force
+                        this.vy -= Math.sin(angle) * force * 1.5; // Increased push force
+                    }
+                }
+                
+                // Damping
+                this.vx *= 0.99;
+                this.vy *= 0.99;
+                
+                // Minimum velocity
+                const minVelocity = 0.1;
+                if (Math.abs(this.vx) < minVelocity) {
+                    this.vx = (Math.random() - 0.5) * minVelocity * 2;
+                }
+                if (Math.abs(this.vy) < minVelocity) {
+                    this.vy = (Math.random() - 0.5) * minVelocity * 2;
+                }
+                
+                // --- SCORING LOGIC ---
+                this.checkScoring();
+            }
+
+            checkScoring() {
+                // Check if particle center is inside the score zone
+                const isInZone = (
+                    this.x > scoreZoneRect.left &&
+                    this.x < scoreZoneRect.right &&
+                    this.y > scoreZoneRect.top &&
+                    this.y < scoreZoneRect.bottom
+                );
+                
+                if (isInZone && !this.isScored) {
+                    this.isScored = true;
+                    score++;
+                    currentScoreDisplay.textContent = `Score: ${score}`;
+                    
+                    // Briefly flash the score zone
+                    scoreZone.classList.add('hit');
+                    setTimeout(() => scoreZone.classList.remove('hit'), 150);
+
+                    // Respawn the particle at a random new location
+                    this.x = Math.random() * width;
+                    this.y = Math.random() * height;
+                    this.vx = (Math.random() - 0.5) * 1;
+                    this.vy = (Math.random() - 0.5) * 1;
+
+                    // Immediately mark as not scored after movement to allow it to be scored again later
+                    setTimeout(() => { this.isScored = false; }, 500);
+
+                } else if (!isInZone && this.isScored) {
+                    // Reset the isScored flag if the particle leaves the zone, 
+                    // though with the respawn logic above, this line is less critical
+                    // this.isScored = false; 
+                }
+            }
+            
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(${this.color.r}, ${this.color.g}, ${this.color.b}, 0.8)`;
+                ctx.fill();
+            }
+        }
+        
+        // Initialize particles
+        for (let i = 0; i < particleCount; i++) {
+            particles.push(new Particle());
+        }
+        
+        // Draw connections between particles
+        function drawConnections() {
+            for (let i = 0; i < particles.length; i++) {
+                for (let j = i + 1; j < particles.length; j++) {
+                    const dx = particles[i].x - particles[j].x;
+                    const dy = particles[i].y - particles[j].y;
+                    const distance = Math.sqrt(dx * dx + dy * dy);
+                    
+                    if (distance < connectionDistance) {
+                        const opacity = 1 - distance / connectionDistance;
+                        ctx.beginPath();
+                        ctx.strokeStyle = `rgba(220, 53, 69, ${opacity * 0.3})`;
+                        ctx.lineWidth = 1;
+                        ctx.moveTo(particles[i].x, particles[i].y);
+                        ctx.lineTo(particles[j].x, particles[j].y);
+                        ctx.stroke();
+                    }
+                }
+            }
+        }
+        
+        // Animation loop
+        function animate() {
+            ctx.clearRect(0, 0, width, height); 
+            
+            drawConnections();
+            
+            particles.forEach(particle => {
+                particle.update();
+                particle.draw();
             });
             
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href') === `#${current}`) {
-                    link.classList.add('active');
-                }
+            requestAnimationFrame(animate);
+        }
+        
+        // --- Event Handlers for Pushing ---
+
+        // Update mouse position for both mouse and touch
+        const updateMousePosition = (e) => {
+            const clientX = e.clientX || (e.touches && e.touches[0].clientX);
+            const clientY = e.clientY || (e.touches && e.touches[0].clientY);
+            
+            if (clientX !== undefined) {
+                // Get canvas bounding box to translate screen coords to canvas coords
+                const rect = canvas.getBoundingClientRect();
+                mouse.x = clientX - rect.left;
+                mouse.y = clientY - rect.top;
+            }
+        };
+
+        const clearMousePosition = () => {
+            mouse.x = null;
+            mouse.y = null;
+        };
+
+        // Attach listeners (using window for better capture)
+        window.addEventListener('mousemove', updateMousePosition);
+        window.addEventListener('mouseleave', clearMousePosition);
+        
+        // Touch events
+        window.addEventListener('touchstart', updateMousePosition, { passive: false });
+        window.addEventListener('touchmove', updateMousePosition, { passive: false });
+        window.addEventListener('touchend', clearMousePosition);
+        
+        // Handle window resize
+        window.addEventListener('resize', () => {
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = window.innerHeight;
+            
+            // Recalculate the position of the score zone
+            updateScoreZoneRect();
+
+            // Adjust particle positions
+            particles.forEach(particle => {
+                if (particle.x > width) particle.x = width;
+                if (particle.y > height) particle.y = height;
             });
         });
         
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
+        // Initial setup for the score zone boundaries
+        updateScoreZoneRect(); 
+        
+        // Start animation
+        animate();
     </script>
 </body>
 </html>
